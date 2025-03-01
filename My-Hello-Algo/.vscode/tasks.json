@@ -3,7 +3,7 @@
     "tasks": [
         {
             "type": "shell",                // 定义任务是被作为进程运行 cppbuild 还是在 shell 中作为命令运行
-            "label": "C Compile",             // 任务的用户界面标签（名称）
+            "label": "C Compile",           // 任务的用户界面标签（名称）
             "command": "gcc",               // 要执行的命令，可以是外部程序或 shell 命令
             "args": [                       // 要传递给命令的参数
                 "-fdiagnostics-color=always",                               // 诊断信息以颜色显示
@@ -23,7 +23,7 @@
         },
         {
             "type": "shell",                // 定义任务是被作为进程运行 cppbuild 还是在 shell 中作为命令运行
-            "label": "CPP Compile",             // 任务的用户界面标签（名称）
+            "label": "CPP Compile",         // 任务的用户界面标签（名称）
             "command": "g++",               // 要执行的命令，可以是外部程序或 shell 命令
             "args": [                       // 要传递给命令的参数
                 "-fdiagnostics-color=always",                               // 诊断信息以颜色显示
