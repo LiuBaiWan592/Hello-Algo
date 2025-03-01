@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",                // 定义任务是被作为进程运行 cppbuild 还是在 shell 中作为命令运行
+            "label": "Compile",             // 任务的用户界面标签（名称）
+            "command": "g++",               // 要执行的命令，可以是外部程序或 shell 命令
+            "args": [                       // 要传递给命令的参数
+                "-fdiagnostics-color=always",                               // 诊断信息以颜色显示
+                "-g",                                                       // 生成调试信息
+                "${file}",                                                  // 要编译的源文件
+                "-o",                                                       // 指定输出文件的路径和名称
+                "${workspaceFolder}/.exe/${fileBasenameNoExtension}.exe"    // 输出文件的路径和名称
+            ],
+            "presentation": {               //执行这个任务时的一些其他设定
+                "echo": true,               //表示在执行任务时在终端要有输出
+                "reveal": "silent",         //执行任务时是否跳转到终端面板，可以为always，silent，never
+                "focus": false,             //设为true后可以使执行task时焦点聚集在终端，但对编译来说，设为true没有意义，因为运行的时候才涉及到输入
+                "panel": "shared",          //每次执行这个task时都新建一个终端面板
+                "showReuseMessage": true,   //控制是否显示“终端将被任务重用, 按任意键关闭”提示.
+                "clear": false,             //设为true，每次执行这个task时清除终端
+            },
+        }
+    ]
+}

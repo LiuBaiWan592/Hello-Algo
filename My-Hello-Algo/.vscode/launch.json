@@ -1,0 +1,49 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // {
+        //     "name": "(Windows) Launch", // 配置名称；显示在启动配置下拉菜单中
+        //     "type": "cppvsdbg",         // 配置类型：cppvsdbg: C++ (Windows)
+        //     "request": "launch",        // 请求配置类型，可以是launch（启动）或attach（附加）
+        //     "preLaunchTask": "Compile", // 调试会话开始前要执行的任务，取名为上面tasks.json中定义的任务名称
+        //     "program": "${workspaceFolder}/.exe/${fileBasenameNoExtension}.exe", // 将要进行调试的程序的路径
+        //     "args": [],                 // 程序调试时传递给程序的命令行参数，一般设为空即可
+        //     "stopAtEntry": false,       // 设为true时程序将暂停在main函数起始处，设为false时不会暂停
+        //     "cwd": "${fileDirname}",    // 调试程序时的工作目录
+        //     "environment": [],          // 要添加到程序环境的环境变量
+        //     "console": "integratedTerminal"   // 调试时使用的终端类型，externalTerminal表示使用外部终端，integratedTerminal表示使用 VS Code 的集成终端
+        // },
+        {
+            "name": "(gdb) Launch",     // 配置名称；显示在启动配置下拉菜单中
+            "type": "cppdbg",           // 配置类型：cppdbg: C++ (GDB/LLDB)
+            "request": "launch",        // 请求配置类型，可以是launch（启动）或attach（附加）
+            "preLaunchTask": "Compile", // 调试会话开始前要执行的任务，取名为上面tasks.json中定义的任务名称
+            // 将要进行调试的程序的路径，workspaceFolder：工作区文件夹路径，fileBasenameNoExtension：不包含后缀的当前文件名
+            "program": "${workspaceFolder}/.exe/${fileBasenameNoExtension}.exe",
+            "args": [],                 // 程序调试时传递给程序的命令行参数，一般设为空即可
+            "stopAtEntry": false,       // 设为true时程序将暂停在main函数起始处，设为false时不会暂停
+            "cwd": "${fileDirname}",    // 调试程序时的工作目录
+            "environment": [],          // 要添加到程序环境的环境变量
+            "externalConsole": false,   // 为true时使用单独的调试控制台，为false时使用IDE的集成终端
+            "MIMode": "gdb",            // 指定连接的调试器，可以为gdb或lldb
+            // MI 调试程序(如 gdb)的路径，注意这里使用的是绝对路径，如果未指定，将首先在环境变量路径中搜索调试程序
+            "miDebuggerPath": "gdb.exe",
+            "setupCommands": [          // 为了安装基础调试程序而执行的一个或多个 GDB/LLDB 命令
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+
+    ]
+}
