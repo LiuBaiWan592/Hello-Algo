@@ -85,8 +85,9 @@ void treeToArrayDFS(TreeNode *root, int i, int *res, int *size) {
 
 /* 将二叉树序列化为列表 */
 int *treeToArray(TreeNode *root, int *size) {
+    int *res = (int *)malloc(sizeof(int) * *size);
     *size = 0;
-    int *res = NULL;
+    // int *res = NULL;
     treeToArrayDFS(root, 0, res, size);
     return res;
 }
