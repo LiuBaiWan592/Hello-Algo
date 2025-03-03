@@ -30,7 +30,7 @@
             "externalConsole": false,   // 为true时使用单独的调试控制台，为false时使用IDE的集成终端
             "MIMode": "gdb",            // 指定连接的调试器，可以为gdb或lldb
             // MI 调试程序(如 gdb)的路径，注意这里使用的是绝对路径，如果未指定，将首先在环境变量路径中搜索调试程序
-            "miDebuggerPath": "gdb.exe",
+            // "miDebuggerPath": "gdb.exe",  // 已添加gdb至环境变量时不需要
             "setupCommands": [          // 为了安装基础调试程序而执行的一个或多个 GDB/LLDB 命令
                 {
                     "description": "为 gdb 启用整齐打印",
@@ -58,7 +58,7 @@
             "externalConsole": false,   // 为true时使用单独的调试控制台，为false时使用IDE的集成终端
             "MIMode": "gdb",            // 指定连接的调试器，可以为gdb或lldb
             // MI 调试程序(如 gdb)的路径，注意这里使用的是绝对路径，如果未指定，将首先在环境变量路径中搜索调试程序
-            "miDebuggerPath": "gdb.exe",
+            // "miDebuggerPath": "gdb.exe",  // 已添加gdb至环境变量时不需要
             "setupCommands": [          // 为了安装基础调试程序而执行的一个或多个 GDB/LLDB 命令
                 {
                     "description": "为 gdb 启用整齐打印",

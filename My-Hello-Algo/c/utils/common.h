@@ -11,6 +11,7 @@
 #define COMMON_H
 
 #include <assert.h>
+#include <limits.h>
 #include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
