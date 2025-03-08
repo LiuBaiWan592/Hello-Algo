@@ -1,7 +1,7 @@
 /**
  * @FileName    :my_list.c
  * @Date        :2024-08-22 10:23:22
- * @Author      :LiuBaiWan-Runner
+ * @Author      :LiuBaiWan (https://github.com/LiuBaiWan592)
  * @Version     :V1.0.0
  * @Brief       :列表（动态数组）的基本操作
  * @Description :简易版列表，包括以下三个重点设计。

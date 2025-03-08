@@ -1,7 +1,7 @@
 /**
  * @FileName    :linked_list.c
  * @Date        :2024-08-14 22:33:01
- * @Author      :LiuBaiWan-Runner
+ * @Author      :LiuBaiWan (https://github.com/LiuBaiWan592)
  * @Version     :V1.0.0
  * @Brief       :链表的基本操作
  * @Description :单链表结构体及其构造函数（list_node.h）、双向链表结构体及其构造函数、某节点后插入节点、删除某节点后一节点、
